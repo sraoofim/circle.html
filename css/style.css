@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  top: 50%;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+.circle img {
+  width: 100%;
+  height: auto;
+}
+.main-circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background-color: #3498db;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.circle-hover {
+  width: 80px;
+  height: 80px;
+  background-color: #f5cb25;
+  border-radius: 70%;
+}
+
+.circle-hover-top {
+  background-color: #f3dd89;
+  border-radius: 50%;
+  top: 50%;
+  left: 90%;
+  transform: translateX(-50%, -50%);
+}
+.circle-hover-bottom {
+  background-color: #b4920b;
+  border-radius: 50%;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+}
+
+.circle-hover-left {
+  background-color: #645209;
+  border-radius: 50%;
+  right: 50%;
+  top: 49%;
+  transform: translateY(-50%, -50%);
+}
+
+.circle-hover-right {
+  background-color: #262009;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-circle:hover ~ .circle-hover-top {
+  transform: translate(-40%, -90px);
+}
+.main-circle:hover ~ .circle-hover-bottom {
+  transform: translate(-50%, 170px);
+}
+.main-circle:hover ~ .circle-hover-left {
+  transform: translate(-130%, -35%);
+}
+.main-circle:hover ~ .circle-hover-right {
+  transform: translate(120px, -50%);
+}
